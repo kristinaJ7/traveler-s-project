@@ -1,0 +1,16 @@
+<svg class="svg_content" xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none">
+ <symbol id="fitness">
+            <mask id="a" width="44" height="45" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type: luminance">
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                d="M2 42h40M26 28h6.19c2.27 0 6.81 1.345 6.81 6.72V42m-6-14 5-11-6-13m-5 2 10-4" />
+              <path fill="#fff" stroke="#fff" stroke-width="4" d="M18 36a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+              <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M18 28h8" />
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                d="m19 20-7-9m-4 0h8" />
+              <path stroke="#fff" stroke-width="4" d="M18 36a8 8 0 1 0 0-16" />
+            </mask>
+            <g mask="url(#a)">
+              <path fill="#ebd300" d="M-2-2h48v48H-2z" />
+            </g>
+          </symbol>
+          </svg>

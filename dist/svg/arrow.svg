@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="35" fill="none">
+ <symbol id="arrow">
+          <path fill="#ebd300" fill-rule="evenodd"
+            d="M1.06 19.858a3.625 3.625 0 0 1 0-5.123L14.73 1.06a3.626 3.626 0 0 1 5.126 5.128L8.748 17.296l11.107 11.107a3.626 3.626 0 1 1-5.124 5.129L1.055 19.858z"
+            clip-rule="evenodd" />
+        </symbol>
+        </svg>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/travel_2-DUEWfbVX.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO meta tags -->
+  <meta name="description"
+    content="Book travels around the world online: tours, hotels, flight tickets. Best prices, reliable partners, 24/7 support. Plan your vacation with us!" />
+  <meta name="keywords"
+    content="travel booking, online tours, flight tickets, hotel reservations, vacation planning, world travel, travel deals, trip organizer" />
+  <meta name="author" content="Travelor-life" />
+
+  <meta name="color-scheme" content="dark light" />
+  <title>Travelor-life</title>
+  <script type="module" crossorigin src="/assets/index-CH14aWvZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dc4_1z5X.css">
+</head>
+
+<body class="page">
+  <!--модалка для шаблонов-->
+  <div class="modal" id="modal-container">
+    <div class="modal__container border_radius_block">
+      <button class="modal__close" aria-label="закрыть"></button>
+      <div class="modal__content"></div>
+    </div>
+  </div>
+
+  <!--1 СЕКЦИЯ-->
+  <section class="section_main_description">
+    <div class="container_reservation">
+      <div class="container_header">
+        <svg width="60" height="60" viewBox="0 0 70 70">
+          <use href="/assets/Travelor-BDBLUVMd.svg#Travelor"></use>
+        </svg>
+        <a class="header__text">
+          <span class="text_logo">Travelor</span>
+        </a>
+      </div>
+      <div class="container_text">
+        <h1 class="container_text_title">
+          Explore the world <br />with ease
+        </h1>
+        <p class="paragraph_text">
+          Discover new cultures<br />
+          and create lifelong <br />memories!
+        </p>
+      </div>
+    </div>
+
+    <!--2 СЕКЦИЯ-->
+    <div class="section_content">
+      <div class="container_nav">
+        <a href="#community" class="link_nav" id="search-btn">contacts</a>
+      </div>
+
+      <div class="section_destinations border_radius_block">
+        <h2 class="title_section">Our Top Destinations</h2>
+        <ul class="destinations_list">
+          <li class="destinations_item active">
+            <a href="#">Best Deals</a>
+          </li>
+          <li class="destinations_item">
+            <a href="#">Popular</a>
+          </li>
+          <li class="destinations_item">
+            <a href="#">Curated Experiences</a>
+          </li>
+        </ul>
+      </div>
+      <!-- весь блок туров-->
+      <div id="gallery" class="gallery">
+        <!-- Карточки будут вставляться сюда динамически -->
+      </div>
+    </div>
+  </section>
+
+  <!--СЕКЦИЯ ОТКРЫТИЯ МОДАЛОК ДЛЯ СЕРВИСА-->
+  <section class="container_services fade-in border_radius_block">
+    <h3 class="">Our Services</h3>
+    <ul class="services_list">
+      <li class="services_list_item">
+        <svg width="40" height="40" viewBox="0 0 50 50">
+          <use href="/assets/hotel-CXa_8_E0.svg#hotel" fill="none"></use>
+        </svg>
+        <span>Hotels</span>
+      </li>
+      <li class="services_list_item">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <use href="/assets/car-BiAOSPwo.svg#car" fill="none"></use>
+        </svg>
+        <span>Cars</span>
+      </li>
+      <li class="services_list_item">
+        <svg width="40" height="40" viewBox="0 0 50 50">
+          <use href="/assets/activity-BjdMc4iq.svg#activity" fill="none"></use>
+        </svg>
+        <span>Activity</span>
+      </li>
+      <li class="services_list_item">
+        <svg width="40" height="40" viewBox="0 0 50 50">
+          <use href="/assets/fitness-bPdfdR3h.svg#fitness" fill="none"></use>
+        </svg>
+        <span>Fitness</span>
+      </li>
+      <li class="services_list_item">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <use href="/assets/beachs-Dw1z35nC.svg#beachs" fill="none"></use>
+        </svg>
+        <span>Beachs</span>
+      </li>
+      <li class="services_list_item">
+        <svg width="40" height="40" viewBox="0 0 50 50">
+          <use href="/assets/24h-DZqQKpen.svg#24h" fill="none"></use>
+        </svg>
+        <span>7j/24h</span>
+      </li>
+    </ul>
+  </section>
+
+  <!--Реализация  Единый шаблон модалки предоставления услуг-->
+  <template id="service-card">
+    <div class="modal-service-card">
+      <button type="button" class="modal-close">&times;</button>
+      <div class="modal-content">
+        <h3 class="modal-title"></h3>
+        <img class="modal-image" src="" />
+        <p class="modal-description"></p>
+      </div>
+    </div>
+  </template>
+
+  <!--card-catalog (карточка тура в каталоге)-->
+
+  <template id="card-catalog">
+    <div class="gallery__item card border_radius_block" role="article" data-category="">
+      <span class="card__category"></span>
+      <img class="card__image" src="" alt="" width="260" height="290" loading="lazy" />
+      <h2 class="card__title accent_color"></h2>
+      <p class="card__description"></p>
+      <button class="button button__dialog_conteiner button_container_text">
+        <span class="button__text button__text_dialog">book</span>
+        <span class="card__price"></span>
+      </button>
+    </div>
+  </template>
+
+  <!--Шаблон для карточки превью (открываеться по нажатию на карточку из gallery)-->
+  <template id="card-preview">
+    <div class="card card_full">
+      <div class="card__column">
+        <span class="card__category card__category_other">discounts</span>
+        <h2 class="card__title_preview accent_color"></h2>
+        <img class="card__image" src="" alt="" width="300" height="400" />
+        <p class="card__text"></p>
+      </div>
+    </div>
+    <form class="form_send" name="contacts">
+      <div class="send">
+        <legend class="legend">
+          Fill out the application and <br />
+          we will contact you soon
+        </legend>
+        <fieldset class="fieldset">
+          <label for="name">
+            <input name="name" class="input input_type_section_card" type="text" id="name" placeholder="Name" required
+              minlength="4" maxlength="10" />
+            <span class="error-message" id="nameError"></span>
+          </label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <label for="phone">
+            <input name="phone" class="input input_type_section_card" type="tel" id="phone" placeholder="Phone"
+              required />
+            <span class="error-message" id="phoneError"></span>
+          </label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <label for="email">
+            <input name="email" class="input input_type_section_card" type="email" id="email" placeholder="Email"
+              required />
+            <span class="error-message" id="emailError"></span>
+          </label>
+       
+        </fieldset>
+        <div class="modal__actions">
+          <button class="button card__button button_container_text">
+            <span>Submit a request</span>
+            <span class="card__price"></span>
+          </button>
+        </div>
+      </div>
+
+
+
+      <!-- Блок согласия на обработку ПД -->
+      <div class="consent-wrapper">
+        <label class="consent-label">
+          <input type="checkbox" name="consent" id="consent" class="checkbox" required />
+          <span class="custom-checkbox"></span>
+        </label>
+        <span class="consent-text">
+          I agree to the processing of my personal data in<br />
+          accordance with the
+          <a href="https://example.com/privacy-policy" target="_blank" class="link_blank active">Privacy Policy</a>
+        </span>
+      </div>
+    </form>
+  </template>
+
+  <!--ШАБЛОН ДЛЯ МОДАЛКИ ПРИ УСПЕШНОЙ ПРОХОЖДЕНИИ ВАЛИДАЦИИ У КАРТОЧКЕ ПРЕВЬЮ ТУРА-->
+  <template id="success">
+    <div class="order-success border_radius_block">
+      <h2 class="order-success__title">Your request has been sent!</h2>
+      <img class="order-success__images" src="/assets/success-ucPCS8fN.png" alt="photo of successful sending" width="250"
+        height="250" />
+      <p class="order-success__description">
+        We will contact you within an hour.<br />
+        Best regards,<span class="accent_color">Travelor!</span>
+      </p>
+      <button class="button order-success__close button_container_text">
+        main page
+      </button>
+    </div>
+  </template>
+
+  <!--2 СЕКЦИЯ САЙТА О КОМПАНИИ -->
+  <section class="section_about border_radius_block fade-in">
+    <div class="section_about_text">
+      <h2 class="about_title">Travelor</h2>
+      <p class="">Travel smarter , not harder</p>
+    </div>
+
+    <div class="section_about_statistics">
+      <h2 class="accent_color">About US</h2>
+      <p class="about_text">
+        we believe that traveling is not just a means of reaching a
+        destination; it is an enriching and transformative experience that
+        opens doors to new cultures, perspectives, and lifelong memories. Our
+        website is designed to be your go-to resource for all things related
+        to travel ...
+      </p>
+      <div class="statistics_container">
+        <ul class="statistics_list">
+          <li>
+            <img src="/assets/card-CxUHym0W.png" alt="The image shows a map of the world" />
+            <div class="stat-text">
+              <span class="stat-number accent_color">+99</span>
+              <p class="stat-label">Destination Tourism</p>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/People-DAZTAuXk.png" alt="The image shows smiling people" />
+            <div class="stat-text">
+              <span class="stat-number accent_color">+299</span>
+              <p class="stat-label">Happy Customer</p>
+            </div>
+          </li>
+
+          <li>
+            <img src="/assets/airplane-DfP5vltA.jpg" alt="The image shows the Elfen Tower night landscape" />
+            <div class="stat-text">
+              <span class="stat-number accent_color">+999</span>
+              <p class="stat-label">Beautiful Photos</p>
+            </div>
+          </li>
+        </ul>
+        <button class="button button_container_text" type="button" id="button_type_about">
+          Discover more
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!--шаблон при нажатии на кнопку Discover more -->
+  <template id="section_about_modal">
+    <div class="section_about_modal border_radius_block">
+      <div class="about_modal_wrapper">
+        <h1 class="about_modal_title accent_color">
+          Spend your vacation with Travelor
+        </h1>
+        <p class="about_modal_text">
+          We are confident that our unique tours will suit everyone.
+        </p>
+      </div>
+      <div class="about_modal_images">
+        <img src="/assets/images1-DBlwkw1W.jpg" alt="" width="250" height="290" />
+        <img src="/assets/images2-C78UrP-u.jpg" alt="" width="250" height="290" />
+        <img src="/assets/images3-DY2tP86Q.jpg" alt="" width="250" height="290" />
+        <img src="/assets/images4-DywS2rgZ.jpg" alt="" width="250" height="290" />
+        <img src="/assets/images5-Np3zXQdq.jpg" alt="" width="250" height="290" />
+      </div>
+
+      <div class="about_modal_commoda">
+        <h2 class="accent_color">Why travellers choose us</h2>
+        <ul class="about_modal_lust" role="list">
+          <li class="about_modal_item animate">
+            Over 10 years of creating unforgettable journeys around the globe
+          </li>
+          <li class="about_modal_item animate">
+            Expert tour operators with first - hand experience in 50+
+            countries
+          </li>
+          <li class="about_modal_item animate">
+            Financial guarantee and insurance — your trip is fully protected
+          </li>
+          <li class="about_modal_item animate">
+            Personal travel manager for every client: custom route planning
+            based on your preferences
+          </li>
+          <li class="about_modal_item animate">
+            Exclusive discounts from hotels and airlines — save up to 30%
+          </li>
+        </ul>
+      </div>
+
+      <div class="about_modal_media">
+        <h3 class="accent_color">Useful resources</h3>
+        <ul>
+          <li>
+            <a class="link_about_modal" href="https://wikivoyage.org">Wikivoyage</a>
+            — a free guide to the world.
+          </li>
+        </ul>
+      </div>
+
+      <video class="video" width="500" height="500" controls preload="metadata" autoplay muted loop playsinline>
+        <source src="/assets/videopreview-CucwtFlU.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
+    </div>
+  </template>
+
+  <!--3 СЕКЦИЯ ЗАПОЛНЕНИЕ ПОЛЬЗОВАЕТЛЕМ ФОРМЫ И ОТПРАВКИ ЕЕ-->
+  <section class="section_community border_radius_block fade-in" id="community">
+    <div class="water-ripple"></div>
+
+    <form class="form">
+      <div class="form_text">
+        <h3 class="accent_color section_form_title">
+          You're closer to the trip than you think.
+        </h3>
+        <p>
+          <span class="accent_color">Dream</span> of unforgettable adventures?
+          Explore exotic beaches, mountains, ancient cities and unique
+          cultures with our perfect tours around the globe!
+        </p>
+      </div>
+      <div class="fieldset_wrapper">
+        <fieldset class="fieldset">
+          <legend class="accent_color">Enter your details</legend>
+          <label for="name">
+            <input name="name" class="input input_type_section" type="text" id="name" placeholder="name" required
+              autocomplete="name" minlength="4" maxlength="10" />
+          </label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <label for="phone">
+            <input name="phone" class="input input_type_section" type="tel" id="phone" placeholder="phone" required
+              autocomplete="tel" />
+            <span class="error-message" id="phoneError"></span>
+          </label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <label for="email">
+            <input name="email" class="input input_type_section" type="email" id="email" placeholder="email" required
+              autocomplete="email" />
+            <span class="error-message" id="emailError"></span>
+          </label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="accent_color">
+            Enter your question or write if you haven't decided on a tour
+          </legend>
+          <textarea class="input textarea"   name="message"  placeholder="enter your question"></textarea>
+        </fieldset>
+      </div>
+
+      <!-- Блок согласия на обработку ПД -->
+      <div class="consent-wrapper">
+        <label class="consent-label">
+          <input type="checkbox" name="consent" id="consent" class="checkbox" required />
+          <span class="custom-checkbox"></span>
+        </label>
+        <span class="consent-text">
+          I agree to the processing of my personal data in<br />
+          accordance with the
+          <a href="https://example.com/privacy-policy" target="_blank" class="link_blank active">Privacy Policy</a>
+        </span>
+      </div>
+
+      <button class="button button_container_text" type="submit">
+        contact me
+      </button>
+    </form>
+
+    <div class="section_community_wrapper border_radius_block">
+      <h3 class="accent_color section_community_title">
+        Join The Biggest Community Of Travelers
+      </h3>
+      <img src="/assets/travel_3-dhJpJib1.png" width="80" height="80" alt="" />
+      <p class="section_community_text">
+        Lorem ipsum dolor sit amet consectetur. Tellus interdum<br />
+        placerat quisque diam dui. Quis neque <br />arcu sapien id risus
+        platea <br />viverra suspendisse<br />
+        duis.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer border_radius_block fade-in">
+    <div class="footer_clients">
+      <h4 class="accent_color">Clients info</h4>
+      <div class="footer_clients_container">
+        <ul class="footer_list">
+          <li class="">
+            We work every day, seven days a week,<br />
+            from 08:00 to 21:00
+          </li>
+          <li>
+            <a href="tel+78001122334" class="link">+7 (800) 112-23-34 </a>
+          </li>
+          <li>
+            <a href="info_clients.@example.com" class="link">
+              info_clients.@example.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer_company">
+      <h2 class="accent_color">Travelor-life</h2>
+      <p>tours for every taste</p>
+      <img src="/assets/travel_2-DUEWfbVX.png" alt="Globe" class="globe" height="50" width="50" />
+    </div>
+
+    <div class="footer_cooperation">
+      <h3 class="accent_color">Сooperation with us</h3>
+      <ul class="footer_list">
+        <li class="">We invite you to cooperate</li>
+        <li>
+          <a href="tel+78002123142" class="link">+7 (800) 212-31-42 </a>
+        </li>
+        <li>
+          <a href="inf_ocooperation.@example.com" class="link">
+            inf_ocooperation.@example.com</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
