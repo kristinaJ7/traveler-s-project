@@ -14,8 +14,8 @@
 
 
  ## GitHub Pages URL  
- ` https://kristinaj7.github.io/traveler-s-project/  `
-
+ ` https://kristinaj7.github.io/traveler-s-project/  ` - Публичный веб‑адрес сайта, размещённого через сервис GitHub Pages.
+https://github.com/kristinaJ7/traveler-s-project.git  - URL репозитория (Git‑репозиторий) Ссылка на исходный код проекта
 
 Стек: HTML, SCSS, TS, Vite
 
