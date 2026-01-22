@@ -1,0 +1,118 @@
+.section_community {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+  background-color: #232222;
+  box-shadow: 1px 0px 20px 7px rgb(138 138 138 / 33%);
+  padding-block: clamp(2.5rem, 1.9205rem + 2.7273vw, 4.375rem);
+  padding: 40px;
+}
+.water-ripple::before,
+.water-ripple::after,
+.water-ripple:first-child {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(64, 62, 62, 0.7);
+  border-radius: 50%;
+}
+/* Фиксированные размеры для каждого круга */
+.water-ripple::before {
+  width: 300px;
+  height: 300px;
+}
+.water-ripple::after {
+  width: 400px;
+  height: 400px;
+}
+.water-ripple:first-child {
+  width: 500px;
+  height: 500px;
+}
+.form {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.form_text,
+.section_community_wrapper,
+.fieldset_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.input {
+  background-color: #333333;
+  border-radius: 20px;
+  padding: 15px 30px 15px 30px;
+}
+.input:focus {
+  outline: none;
+}
+.input:hover {
+  background-color: #545252;
+}
+.input_type_section {
+  padding-block: 18px;
+  padding-inline: 80px;
+}
+.textarea {
+  width: 73%;
+  border: none;
+}
+/* Скрываем стандартный чекбокс */
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* Кастомный чекбокс */
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff; /* Синий контур */
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #757171;
+  position: relative;
+}
+/* Состояние "выбрано" */
+.checkbox:checked + .custom-checkbox {
+  background-color: #292a2b;
+  border-color: #0056b3;
+}
+/* Иконка галочки (можно заменить на SVG/изображение) */
+.checkbox:checked + .custom-checkbox::after {
+  content: '✓';
+  font-size: 20px;
+  /* Ключевое: абсолютное позиционирование внутри .custom-checkbox */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Смещение на половину размера элемента */
+  transform: translate(-50%, -50%);
+}
+/* При наведении на чекбокс */
+.custom-checkbox:hover {
+  border-color: #054386;
+}
+.section_community_title {
+  font-size: 3rem;
+}
+.section_community_text {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 1400px) {
+  .section_community {
+    flex-direction: column;
+  }
+}

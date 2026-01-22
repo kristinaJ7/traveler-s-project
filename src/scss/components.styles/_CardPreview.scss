@@ -1,0 +1,30 @@
+.preview-container {
+  display: flex;
+  align-items: center;
+  background-color: #232323;
+  border-radius: 20px;
+  text-align: center;
+}
+.card__column, .send  {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.card__title_preview {
+  font-size: 2rem;
+}
+.card__text {
+  padding: 40px;
+  font-size: 1.3rem;
+}
+.input_type_section_card {
+  background-color: #c7c7c7;
+  padding-inline: 80px;
+  padding-block: 20px;
+}
+@media (max-width: 768px) {
+  .preview-container {
+    flex-direction: column;
+  }
+}

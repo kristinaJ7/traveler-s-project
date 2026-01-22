@@ -1,0 +1,96 @@
+.section_main_description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.section_content,
+.container_nav_wrapper,
+.container_nav,
+.destinations_list {
+  display: flex;
+  gap: 20px;
+}
+.container_reservation {
+  background-image: url("/public/travel_photos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: grid;
+}
+.container_header {
+  grid-row: 1;
+  grid-column: 1/7;
+}
+.container_text {
+  grid-row: 2;
+  grid-column: 2/6;
+}
+.container_header,
+.container_text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container_text {
+  flex-direction: column;
+}
+.container_text_title {
+  font-size: 2.3rem;
+}
+.paragraph_text {
+  font-size: 2rem;
+  opacity: 65%;
+}
+.button_container_text {
+  background-color: #ebd300;
+  padding: 15px 54px 15px 54px;
+  transition: border-color 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+.button_container_text:hover {
+  background-color: #554d06;
+  color: #ffffff;
+  background-color: #131313;
+  border-color: #b8b8b8;
+}
+.section_content {
+  flex-direction: column;
+}
+a:hover {
+  transition: all 0.6s ease;
+  color: #eed812;
+  border-bottom: 1px solid #eed812;
+}
+.container_nav {
+  justify-content: flex-end;
+}
+.destinations_item.active, .link_blank.active {
+  border-bottom: 1px solid #eed812;
+  color:  #eed812;
+}
+.link_nav {
+  background-color: #ebd300;
+  border-radius: 20px;
+  padding: 7px 8px 7px 8px;
+  color: #131313;
+}
+.link_nav:hover {
+  color: #716f6f;
+  border: none;
+}
+.section_destinations {
+  background-color: #333333;
+  padding: 20px;
+}
+.destinations_list {
+  gap: 60px;
+}
+@media (max-width: 1500px) {
+  .section_main_description {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

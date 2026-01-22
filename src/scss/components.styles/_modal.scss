@@ -1,0 +1,35 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 61%);
+  display: none;
+  z-index: 2;
+}
+.modal.modal_active {
+  display: flex;
+}
+.modal__container {
+  margin: auto;
+  max-width: 1200px;
+  box-shadow: 1px 0px 20px 7px rgb(138 138 138 / 33%);
+}
+.modal__close {
+  position: absolute;
+}
+.modal__content {
+  padding: 30px;
+}
+//модалка успеха
+.order-success {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 20px;
+  width: 100%;
+}

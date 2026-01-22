@@ -1,0 +1,29 @@
+.footer,
+.footer_clients,
+.footer_cooperation,
+.footer_list,
+.footer_company {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  text-align: center;
+  background-color: #383838;
+  padding: 10px;
+}
+.footer_clients,
+.footer_cooperation {
+  flex-direction: column;
+}
+.footer_list {
+  flex-direction: column;
+  gap: 20px;
+}
+.footer_company {
+  flex-direction: column;
+}
+@media (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+  }
+}

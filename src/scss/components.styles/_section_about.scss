@@ -1,0 +1,79 @@
+.section_about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #2a2a2a;
+  padding: 20px;
+    box-shadow: 1px 0px 20px 7px rgb(138 138 138 / 33%);
+}
+.section_about_text {
+  position: relative;
+  text-align: center;
+  padding-block: 300px;
+  width: 100%;
+}
+/* Фон через псевдоэлемент */
+.section_about_text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/public/city23.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  opacity: 0.5;
+  z-index: -1;
+}
+.about_title {
+  font-size: 6rem;
+}
+.section_about_statistics,
+.statistics_container,
+.statistics_list,
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.statistics_container {
+  align-items: center;
+}
+.statistics_list {
+  flex-direction: row;
+}
+.stat-text {
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+$background-color: #1c1c1c;
+$font-family: "Montserrat", sans-serif;
+body {
+  min-inline-size: 700px;
+  min-block-size: 100vh;
+  font-family: $font-family;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 140px;
+  padding: 30px;
+  color: #ffffff;
+}
+.border_radius_block {
+  border-radius: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Базовые стили для скрытия и анимации */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.accent_color {
+  color: #eed812;
+}
+@media (max-width: 1500px) {
+  body {
+    flex-direction: column;
+  }
+}

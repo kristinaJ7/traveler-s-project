@@ -1,0 +1,6 @@
+ <svg class="svg_content" xmlns="http://www.w3.org/2000/svg" width="48" height="39" fill="none">
+  <symbol id="hotel">
+            <path stroke="#ebd300" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              d="M42.643 28.929v-1.715A18.857 18.857 0 0 0 23.786 8.357m0 0A18.857 18.857 0 0 0 4.929 27.214v1.715M23.786 8.357V1.5M46.07 28.929H1.5l1.097 3.668A6.86 6.86 0 0 0 9.18 37.5h29.211a6.86 6.86 0 0 0 6.583-4.903z" />
+     </symbol>
+          </svg>

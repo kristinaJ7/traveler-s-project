@@ -1,0 +1,24 @@
+//основной файл стилей иппорт стилей
+@use "components.styles/_content_description";
+
+@use "components.styles/globals";
+
+@use "components.styles/page";
+
+@use "../fonts/fonts";
+
+@use "components.styles/section_about";
+
+@use "components.styles/service_section";
+
+@use "components.styles/section_community";
+
+@use "components.styles/footer";
+
+@use "./components.styles/gallery";
+
+@use "components.styles/modal";
+
+@use "components.styles/CardPreview";
+
+@use './components.styles/section_about_modal.scss'

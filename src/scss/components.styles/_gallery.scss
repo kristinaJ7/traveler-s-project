@@ -1,0 +1,57 @@
+.gallery {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  justify-content: space-between;
+  height: 600px;
+
+  /* Состояния */
+  &:hover {
+    background-color: #4e4c4c;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.card__category {
+  background-color: #b98787;
+  border-radius: 30px;
+  padding: 10px;
+}
+.card__image {
+  border-radius: 30px;
+}
+.card__title {
+  font-size: 1rem;
+}
+.button__dialog_conteiner {
+  padding-block: 10px;
+  padding-inline: 25px;
+}
+@media (max-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gallery__item {
+    padding: 10px;
+  }
+
+  .card__title {
+    font-size: 2rem;
+  }
+  .card__description {
+   font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,35 @@
+$background-color: #333333;
+$hover_background-color: #4e4c4c;
+.container_services {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  box-shadow: 1px 0px 20px 7px rgb(138 138 138 / 33%);
+}
+.services_list,
+.service_button {
+  display: flex;
+  gap: 40px;
+}
+.services_list_item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: $background-color;
+  padding-block: 20px;
+  padding-inline: 45px;
+  border-radius: 10px;
+  /* Состояния */
+  &:hover {
+    background-color: $hover_background-color;
+  }
+}
+
+@media (max-width: 1250px) {
+  .services_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

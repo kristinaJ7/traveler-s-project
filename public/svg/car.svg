@@ -1,0 +1,6 @@
+ <svg class="svg_content" xmlns="http://www.w3.org/2000/svg" width="38" height="26" fill="none">
+  <symbol id="car">
+            <path stroke="#ebd300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M29 11h4a4 4 0 0 1 4 4v4a2 2 0 0 1-2 2h-3m-3-10H16m13 0-4.834-8.058A4 4 0 0 0 20.736 1H16m16 20a4 4 0 1 1-8 0m8 0a4 4 0 1 0-8 0m-8-10V1m0 10H5M16 1h-5.72a4 4 0 0 0-3.924 3.216L5 11m0 0a4 4 0 0 0-4 4v4a2 2 0 0 0 2 2h3m0 0a4 4 0 1 0 8 0m-8 0a4 4 0 1 1 8 0m0 0h10" />
+        </symbol>
+          </svg>
