@@ -1,4 +1,4 @@
-# Проектная работа "Travelor-туры"
+## Проектная работа "Travelor-туры"
 
 
 
@@ -8,7 +8,7 @@
 
  
 <img width="800" height="1500" alt="images_website (1)" src="https://github.com/user-attachments/assets/957d7670-5a33-4d67-a38d-696808f7c9a9" />
-<img width="600" height="1000" alt="Blank 2 Grids Collage" src="https://github.com/user-attachments/assets/72928058-fbed-4f8c-869b-3c3fd4843ae9" style="border-radius: 15px;"/>
+<img width="600" height="1000" alt="Blank 2 Grids Collage" src="https://github.com/user-attachments/assets/72928058-fbed-4f8c-869b-3c3fd4843ae9"/>
 
 
 
