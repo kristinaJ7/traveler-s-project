@@ -12,7 +12,8 @@
 
 
 
- ## GitHub Pages URL   ` https://kristinaj7.github.io/traveler-s-project/  `
+ ## GitHub Pages URL  
+ ` https://kristinaj7.github.io/traveler-s-project/  `
 
 
 Стек: HTML, SCSS, TS, Vite
