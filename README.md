@@ -1,5 +1,6 @@
 # Проектная работа "Travelor-туры"
 
+<img width="1070" height="1920" alt="images_website (1)" src="https://github.com/user-attachments/assets/957d7670-5a33-4d67-a38d-696808f7c9a9" />
 
 # Сайт Travelor-туры- «Web-помошник в поиске туров по всему миру»
 
