@@ -1,0 +1,16 @@
+name: Deploy Vite to GitHub Pages
+on:
+  push:
+    branches: [main] # или другая ветка
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action@v2.15.0
+      - run: pnpm install # или npm install / yarn install
+      - run: pnpm build # или npm run build / yarn build
+      - uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages # ветка для деплоя
+          folder: dist # папка с собранными файлами
