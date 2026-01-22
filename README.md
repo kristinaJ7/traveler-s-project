@@ -9,6 +9,12 @@
  
 <img width="800" height="1500" alt="images_website (1)" src="https://github.com/user-attachments/assets/957d7670-5a33-4d67-a38d-696808f7c9a9" />
 
+
+
+
+ ## GitHub Pages URL   ` https://kristinaj7.github.io/traveler-s-project/  `
+
+
 Стек: HTML, SCSS, TS, Vite
 
 Структура проекта:
