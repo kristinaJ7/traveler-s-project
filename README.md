@@ -7,7 +7,7 @@
  « Travelor-туры »  Мечтаете о путешествии, но не хотите тратить время на поиск подходящих вариантов? Сайт Travelor создан, чтобы сделать планирование отпуска максимально простым и приятным. Мы объединили лучшие туры от надёжных туроператоров — выбирайте направление, настраивайте фильтры и бронируйте поездку в пару кликов!
 
  
-<img width="800" height="1200" alt="images_website (1)" src="https://github.com/user-attachments/assets/957d7670-5a33-4d67-a38d-696808f7c9a9" />
+<img width="800" height="1500" alt="images_website (1)" src="https://github.com/user-attachments/assets/957d7670-5a33-4d67-a38d-696808f7c9a9" />
 
 Стек: HTML, SCSS, TS, Vite
 
