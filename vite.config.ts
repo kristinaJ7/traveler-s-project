@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+   publicDir: 'public',  // копирует public/ в dist/public/
   plugins: [],
   css: {
     preprocessorOptions: {
